@@ -39,19 +39,11 @@ using namespace std;
   Space Complexity: O(2n)
 
 */
+
+int singleNumber_2(vector<int>);
+
 int singleNumber_1(vector<int> nums) {
-    if(nums.size() % 2 == 0)
-        return -1;
-
-    set<int> s;
-    for(auto i : nums) {
-        if(s.count(i))
-            s.erase(i);
-        else
-            s.insert(i);
-    }
-
-    return *s.begin();
+    return singleNumber_2(nums);
 }
 
 /*
